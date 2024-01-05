@@ -37,113 +37,109 @@ export default function Home() {
         <div className={styles.description}>
           <div>
             <a
+              href="https://lazada.com.ph/shop/shotgunsinnerrecords"
+              className={styles.card}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Order from our Lazada 🛸
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://facebook.com/shotgunsinnerrecords"
+              className={styles.card}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Follow us on Facebook 🤘🏻
+            </a>
+          </div>
+          <div>
+            <a
               href="https://shopee.ph/shotgunsinnerrecords"
               className={styles.card}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Order from our Shopee 🛸
-            </a>
-          </div>
-
-          <div>
-            <span>
-              A music store in Manila, Philippines
-            </span>
-          </div>
-          <div>
-            <a
-              href="https://www.lazada.com.ph/shop/shotgunsinnerrecords"
-              className={styles.card}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Order from our Lazada 👻
+              Order from our Shopee 👻
             </a>
           </div>
         </div>
 
-        <div className={styles.center}>
-          <ImgixProvider>
-            <ImgixImage
-              className={styles.logo}
-              src="/shotgun-sinner-records-logo.png"
-              alt="Undeciphered Clothing Logo"
-              width={500}
-              height={140}
-              priority
-            />
-            <ImgixImage
-              className={styles.logoMobile}
-              src="/shotgun-sinner-records-logo-square.png"
-              alt="Undeciphered Clothing Logo"
-              width={300}
-              height={300}
-              priority
-            />
-          </ImgixProvider>
+        <div>
+          <div className={styles.center}>
+            <ImgixProvider>
+              <ImgixImage
+                className={styles.logo}
+                src="/shotgun-sinner-records-logo.png"
+                alt="Shotgun Sinner Records Logo"
+                width={500}
+                height={140}
+                priority
+              />
+              <ImgixImage
+                className={styles.logoMobile}
+                src="/shotgun-sinner-records-logo-square.png"
+                alt="Shotgun Sinner Records Logo"
+                width={300}
+                height={300}
+                priority
+              />
+            </ImgixProvider>
+          </div>
+
+          <div className={styles.grid}>
+            <div className={styles.card}>
+              <h2 className={horta.className}>
+                We only sell <br/> original items
+              </h2>
+              <p className={jura.className}>
+                We are collectors ourselves and <br/> we are allergic to b00tleg
+              </p>
+            </div>
+
+            <div className={styles.card}>
+              <h2 className={horta.className}>
+                Dedicated to <br/> rock and metal fans
+              </h2>
+              <p className={jura.className}>
+                We source out rare albums <br/> for your collection
+              </p>
+            </div>
+
+            <div className={styles.card}>
+              <h2 className={horta.className}>
+                We pack them <br/> like we own them
+              </h2>
+              <p className={jura.className}>
+                Guaranteed your orders are <br/> well-packed & with fragile labels
+              </p>
+            </div>
+
+            <div className={styles.card}>
+              <h2 className={horta.className}>
+                Ships within <br/> 1-2 business days
+              </h2>
+              <p className={jura.className}>
+                Orders placed Mon-Thu (ships <br/> in 1-2 days), Fri-Sun (2-4 days)
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div className={styles.grid}>
-          <a
-            href="https://shopee.ph/undecipheredclothing?shopCollection=244704110"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={horta.className}>
-              CYBERPUNK
-            </h2>
+        <div className={styles.footer}>
+          <div className={styles.footerColumn}>
             <p className={jura.className}>
-              Wear something Gibsonesque 🦾 <br />
-              10 designs to choose from!
+              &copy; 2024 Shotgun Sinner Records. All rights reserved.
             </p>
-          </a>
+          </div>
 
-          <a
-            href="https://shopee.ph/undecipheredclothing?shopCollection=244850338"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={horta.className}>
-              IMPACT THREADS
-            </h2>
+          <div className={styles.footerColumn}>
             <p className={jura.className}>
-              Support a cause for every purchase 🤍 <br />
-              Designs out now!
+              💌 &nbsp; info@shotgunsinner.com &bull; 📞 &nbsp; +63 962 071 4799
             </p>
-          </a>
-
-          <a
-            href="https://shopee.ph/undecipheredclothing?shopCollection=244885371"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={horta.className}>
-              MANIFESTO
-            </h2>
-            <p className={jura.className}>
-              Speak without saying a word 😌 <br />
-              Grab all 5 designs!
-            </p>
-          </a>
-
-          <a
-            href="https://shopee.ph/undecipheredclothing?shopCollection=244882766"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={horta.className}>
-              DARK MODE
-            </h2>
-            <p className={jura.className}>
-              Because light attracts bugs 👩‍💻 <br />
-              Collect all 10 designs!
-            </p>
-          </a>
+          </div>
         </div>
       </main>
     </>
