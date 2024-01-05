@@ -1,10 +1,12 @@
+import { useEffect, useRef } from "react";
 import Head from 'next/head'
 import { Jura } from "next/font/google"
 import localFont from "next/font/local"
 import styles from 'styles/Home.module.css'
 import { ImgixProvider } from "components/ImgixProvider";
 import { ImgixImage } from "components/ImgixImage";
-import Typed from 'react-typed';
+import Typed from "typed.js";
+
 
 const jura = Jura({ subsets: ['latin'], weight: ['400'] })
 const horta = localFont({
@@ -16,7 +18,35 @@ const horta = localFont({
   ],
 });
 
-export default function Home() {
+const Home = () => {
+  const typeTarget = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(typeTarget.current, {
+      strings: [
+        'We are a music store based in Manila, Philippines.',
+        'Established in May 2023, we first opened our Shopee store to rock and metal fans.',
+        'At the start of 2024, we expanded our reach and opened our Lazada store.',
+        'Our name is based from the song Hang \'Em High, Kid by My Chemical Romance.',
+        'It\'s our favorite band but we sell all kinds of rock and metal music.',
+        'Thrash metal bands: Slayer, Testament, Megadeth, Metallica, and more.',
+        'Death metal bands: Cannibal Corpse, Children of Bodom, Arch Enemy, Cryptopsy, and more.',
+        'Black metal bands: Dimmu Borgir, Cradle of Filth, Satyricon, Behemoth, Emperor, and more.',
+        'Metalcore bands: Trivium, Killswitch Engage, Bring Me The Horizon, and more.',
+        'Nu metal bands: Slipknot, Coal Chamber, Kittie, Otep, Marilyn Manson, Korn, and more.',
+        'Post-hardcore bands: Alesana, The Used, Saosin, A Skylit Drive, Pierce The Veil, Silverstein, and more.',
+        'Pop punk bands: Fall Out Boy, Paramore, Neck Deep, Panic! At the Disco, Rufio, Yellowcard, and more.',
+        'Come visit our Lazada and Shopee stores to see our full collection.'
+      ],
+      typeSpeed: 60,
+      loop: true,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -90,27 +120,7 @@ export default function Home() {
             </ImgixProvider>
           </div>
           <div className={styles.about}>
-            <p className={jura.className}>
-              <Typed
-                strings={[
-                  'We are a music store based in Manila, Philippines.',
-                  'Established in May 2023, we first opened our Shopee store to rock and metal fans.',
-                  'At the start of 2024, we expanded our reach and opened our Lazada store.',
-                  'Our name is based from the song Hang \'Em High, Kid by My Chemical Romance.',
-                  'It\'s our favorite band but we sell all kinds of rock and metal music.',
-                  'Thrash metal bands: Slayer, Testament, Megadeth, Metallica, and more.',
-                  'Death metal bands: Cannibal Corpse, Children of Bodom, Arch Enemy, Cryptopsy, and more.',
-                  'Black metal bands: Dimmu Borgir, Cradle of Filth, Satyricon, Behemoth, Emperor, and more.',
-                  'Metalcore bands: Trivium, Killswitch Engage, Bring Me The Horizon, and more.',
-                  'Nu metal bands: Slipknot, Coal Chamber, Kittie, Otep, Marilyn Manson, Korn, and more.',
-                  'Post-hardcore bands: Alesana, The Used, Saosin, A Skylit Drive, Pierce The Veil, Silverstein, and more.',
-                  'Pop punk bands: Fall Out Boy, Paramore, Neck Deep, Panic! At the Disco, Rufio, Yellowcard, and more.',
-                  'Come visit our Lazada and Shopee stores to see our full collection.'
-                ]}
-                typeSpeed={60}
-                loop
-              />
-            </p>
+            <p ref={typeTarget} className={jura.className} />
           </div>
           <div className={styles.grid}>
             <div className={styles.card}>
@@ -175,3 +185,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home

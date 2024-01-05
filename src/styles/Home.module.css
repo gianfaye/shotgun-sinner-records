@@ -19,6 +19,7 @@
   font-size: 14px;
   text-align: center;
   opacity: 0.6;
+  margin-right: -17px;
 }
 
 .description {
@@ -61,8 +62,8 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
-  width: var(--max-width);
-  max-width: 100%;
+  width: 100%;
+  max-width: var(--max-width);
 }
 
 .card {
@@ -200,7 +201,7 @@
 }
 
 /* Mobile */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .content {
     padding: 4rem;
   }
@@ -278,13 +279,6 @@
   }
 }
 
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
-}
-
 @media (prefers-color-scheme: dark) {
   .vercelLogo {
     filter: invert(1);
@@ -313,14 +307,14 @@
 
 
 .footerColumn a {
-  color: #fff; /* Set your preferred link color */
+  color: #fff;
   text-decoration: none;
 }
 
-/* Add any additional styling for the center and right columns if needed */
-
-/* Responsive styles */
 @media (max-width: 768px) {
+  .about {
+    display: none;
+  }
   .footer {
     flex-direction: column;
     align-items: center;
