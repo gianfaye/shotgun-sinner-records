@@ -27,8 +27,8 @@
   justify-content: inherit;
   align-items: inherit;
   font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
+  width: var(--max-width);
+  max-width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
 }
@@ -62,8 +62,8 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
-  width: 100%;
-  max-width: var(--max-width);
+  max-width: 100%;
+  width: var(--max-width);
 }
 
 .card {
@@ -197,6 +197,13 @@
 
   .card:hover span {
     transform: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    max-width: var(--max-width);
+    width: 100%;
   }
 }
 
